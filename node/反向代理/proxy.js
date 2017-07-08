@@ -15,7 +15,7 @@ http.createServer(function(req, res) {
     });
 
     https.get(uri, function(response) {
-        // TODO
+        response.pipe(res);
     });
 }).listen(3000);
 
